@@ -4,7 +4,7 @@
 GREEN='\033[00;32m'
 RESTORE='\033[0m'
 
-echo -e "${GREEN}>>> Начинаем установку зеркала ChainGate...${RESTORE}"
+echo -e "${GREEN}>>> Начинаем установку зеркала...${RESTORE}"
 
 # 1. Проверка прав
 if [ "$EUID" -ne 0 ]; then
@@ -44,7 +44,7 @@ echo "Собираем проект..."
 CUR_DIR=$(pwd)
 cat <<EOF > /etc/systemd/system/mirror.service
 [Unit]
-Description=ChainGate Mirror Service
+Description=Mirror Service
 After=network.target
 
 [Service]
