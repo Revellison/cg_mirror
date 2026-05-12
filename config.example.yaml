@@ -1,0 +1,16 @@
+apps:
+  - name: "apk-github"
+    port: 8081
+    source: "github"
+    repo: "owner/repo" # Только для github
+    arch_map:
+      v7a: "android-armv7"
+      v8a: "android-arm64"
+
+  - name: "apk-custom"
+    port: 8082
+    source: "static"
+    links: # Прямые ссылки для разных путей
+      v7a: "https://storage.yandexcloud.net/my-bucket/client-v7a.bin"
+      v8a: "https://another-host.com/files/client-v8a.bin"
+      latest: "https://t.me/your_channel/123"
