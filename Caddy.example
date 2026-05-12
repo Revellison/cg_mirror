@@ -1,0 +1,7 @@
+client.example.com {
+    reverse_proxy localhost:8081
+}
+
+tools.example.com {
+    reverse_proxy localhost:8082
+}
